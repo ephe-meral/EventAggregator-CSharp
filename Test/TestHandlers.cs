@@ -10,6 +10,15 @@ namespace Test
 	public class TestHandlers : IRegisterable
 	{
 
+		String name;
+
+
+		public TestHandlers(String name)
+		{
+			this.name = name;
+		}
+
+
 		public void RegisterMeWith(IEventAggregator aggregator)
 		{
 			aggregator.Register<SomeEvent>(OnSampleEvent);
@@ -19,13 +28,13 @@ namespace Test
 
 		public void OnSampleEvent(SomeEvent evt)
 		{
-			Console.WriteLine("Got the sample event with message: [ Foo = " + evt.Foo + " ]");
+			Console.WriteLine(name + " got the sample event with message: [ Foo = " + evt.Foo + " ]");
 		}
 
 
 		public void OnOtherEvent(SomeOtherEvent evt)
 		{
-			Console.WriteLine("Got the other sample event with message: [ Bar = " + evt.Bar + " ]");
+			Console.WriteLine(name + " got the other sample event with message: [ Bar = " + evt.Bar + " ]");
 		}
 	}
 }

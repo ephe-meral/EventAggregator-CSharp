@@ -16,11 +16,14 @@ namespace Test
 			// create the event aggregator and the object
 			// that contains the handler methods
 			var aggr = new EventAggregator.EventAggregator();
-			var handlerObj = new TestHandlers();
+			//var aggr = new EventAggregator.ConcurrentEventAggregator();
+			var handlerObj1 = new TestHandlers("1st handlers");
+			var handlerObj2 = new TestHandlers("2nd handlers");
 
 			// call the convenience method to register the handlers
 			// with the aggregator
-			aggr.Register(handlerObj);
+			aggr.Register(handlerObj1);
+			aggr.Register(handlerObj2);
 
 			// create some mock events and set their sample values
 			var fooEvt = new SomeEvent();

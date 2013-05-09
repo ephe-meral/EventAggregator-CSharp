@@ -43,6 +43,7 @@
     <Compile Include="IEvent.cs" />
     <Compile Include="IRegisterable.cs" />
     <Compile Include="EventHandler.cs" />
+    <Compile Include="ConcurrentEventAggregator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
