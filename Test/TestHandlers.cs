@@ -1,3 +1,7 @@
+/**
+ * For copyright information see the LICENSE document.
+ */
+
 using System;
 using EventAggregator;
 
@@ -21,7 +25,7 @@ namespace Test
 
 		public void OnOtherEvent(SomeOtherEvent evt)
 		{
-			Console.WriteLine("Got the other event with message: [ Bar = " + evt.Bar + " ]");
+			Console.WriteLine("Got the other sample event with message: [ Bar = " + evt.Bar + " ]");
 		}
 	}
 }

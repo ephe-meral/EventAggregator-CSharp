@@ -1,3 +1,7 @@
+/**
+ * For copyright information see the LICENSE document.
+ */
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
