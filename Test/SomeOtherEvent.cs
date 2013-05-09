@@ -1,12 +1,11 @@
 using System;
+using EventAggregator;
 
 namespace Test
 {
-	public class SomeOtherEvent
+	public class SomeOtherEvent : IEvent
 	{
-		public SomeOtherEvent ()
-		{
-		}
+		public String Bar;
 	}
 }
 

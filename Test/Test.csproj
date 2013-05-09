@@ -32,6 +32,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SomeEvent.cs" />
+    <Compile Include="SomeOtherEvent.cs" />
+    <Compile Include="TestHandlers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
+      <Project>{B65E0D62-4CAB-4F5C-B041-79EA7FAB1C22}</Project>
+      <Name>EventAggregator</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

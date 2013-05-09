@@ -2,11 +2,12 @@ using System;
 
 namespace EventAggregator
 {
-	public class EventHandler
-	{
-		public EventHandler ()
-		{
-		}
-	}
+	/// <summary>
+	/// EventHandler delegate.
+	/// This delegate defines the signature of any event handler method.
+	/// If you keep to this, you can register your own methods with the
+	/// EventAggregator.
+	/// </summary>
+	public delegate void EventHandler<T>(T evt) where T : IEvent;
 }
 
