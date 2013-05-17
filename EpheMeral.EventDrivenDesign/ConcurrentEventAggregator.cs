@@ -5,24 +5,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
+using System.Threading.Tasks;
 
-namespace EventAggregator
+namespace EpheMeral.EventDrivenDesign
 {
 	/// <summary>
 	/// EventAggregator class.
-	/// This class represents a single threaded IEventAggregator implementation
+	/// This class represents a multi threaded IEventAggregator implementation
 	/// that uses a minimum of reflection and the EventHandler generic delegate type.
+	/// This class will fork a triggered event into multiple tasks, each of them being
+	/// defined by one of the registered handlers.
 	/// For more information see IEventAggregator.
 	/// </summary>
-	public class EventAggregator : IEventAggregator
+	public class ConcurrentEventAggregator : IEventAggregator
 	{
-
+		
 		IDictionary<Type, IList<EventHandler<IEvent>>> handlers;
 
 
-		public EventAggregator()
+		public ConcurrentEventAggregator()
 		{
-			handlers = new Dictionary<Type, IList<EventHandler<IEvent>>>();
+			handlers = new ConcurrentDictionary<Type, IList<EventHandler<IEvent>>>();
 		}
 
 
@@ -51,10 +55,10 @@ namespace EventAggregator
 
 			if (handlers.TryGetValue(evt.GetType(), out handlerList))
 			{
-				foreach (EventHandler<IEvent> handler in handlerList)
+				Parallel.ForEach (handlerList, handler =>
 				{
 					handler.Invoke(evt);
-				}
+				});
 			}
 		}
 	}

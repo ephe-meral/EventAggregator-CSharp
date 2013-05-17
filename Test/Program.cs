@@ -3,7 +3,7 @@
  */
 
 using System;
-using EventAggregator;
+using EpheMeral.EventDrivenDesign;
 
 namespace Test
 {
@@ -15,7 +15,7 @@ namespace Test
 
 			// create the event aggregator and the object
 			// that contains the handler methods
-			var aggr = new EventAggregator.EventAggregator();
+			var aggr = new EventAggregator();
 			//var aggr = new EventAggregator.ConcurrentEventAggregator();
 			var handlerObj1 = new TestHandlers("1st handlers");
 			var handlerObj2 = new TestHandlers("2nd handlers");

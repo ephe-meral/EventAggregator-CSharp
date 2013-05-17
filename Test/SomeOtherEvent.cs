@@ -3,7 +3,7 @@
  */
 
 using System;
-using EventAggregator;
+using EpheMeral.EventDrivenDesign;
 
 namespace Test
 {

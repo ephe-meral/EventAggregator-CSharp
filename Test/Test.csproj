@@ -38,9 +38,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
+    <ProjectReference Include="..\EpheMeral.EventDrivenDesign\EpheMeral.EventDrivenDesign.csproj">
       <Project>{B65E0D62-4CAB-4F5C-B041-79EA7FAB1C22}</Project>
-      <Name>EventAggregator</Name>
+      <Name>EpheMeral.EventDrivenDesign</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

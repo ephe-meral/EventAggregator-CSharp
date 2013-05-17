@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAggregator", "EventAggregator\EventAggregator.csproj", "{B65E0D62-4CAB-4F5C-B041-79EA7FAB1C22}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{29A12ED6-4762-495D-AC08-505EA5ACE781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpheMeral.EventDrivenDesign", "EpheMeral.EventDrivenDesign\EpheMeral.EventDrivenDesign.csproj", "{B65E0D62-4CAB-4F5C-B041-79EA7FAB1C22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

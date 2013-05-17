@@ -4,7 +4,7 @@
 
 using System;
 
-namespace EventAggregator
+namespace EpheMeral.EventDrivenDesign
 {
 	/// <summary>
 	/// IEvent interface.
